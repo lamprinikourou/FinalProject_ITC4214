@@ -1,0 +1,76 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Our best deals start now</h1>
+            <p>Save up to 50% and give the gift of fresh air this holiday season</p>
+            <a href="{% url 'catalog:catalog_home' %}" class="button">Shop now</a>
+        </div>
+        <div class="hero-image">
+            <img src="{% static 'core/images/holiday_purifier.png' %}" alt="Air Purifier">
+        </div>
+    </section>
+
+    <div class="feature-container my-5">
+        <h2 class="section-title">Discover Our Features</h2>
+        <div class="feature-row">
+            <div class="feature-card">
+                <h3 class="feature-title">Clean Air</h3>
+                <img src="{% static 'core/images/air.svg' %}" alt="Clean Air" class="small-feature-img">
+                <p class="feature-text">Experience the freshest air with advanced filtration.</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-title">Track Usage</h3>
+                <img src="{% static 'core/images/track.svg' %}" alt="Track Usage" class="small-feature-img">
+                <p class="feature-text">Monitor your air quality in real-time from anywhere.</p>
+            </div>
+            <div class="feature-card">
+                <h3 class="feature-title">Learn More</h3>
+                <img src="{% static 'core/images/learn.svg' %}" alt="Learn More" class="small-feature-img">
+                <p class="feature-text">Understand the benefits of clean air for your health.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <h2 class="text-center">Customer Testimonials</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner text-center">
+                <div class="carousel-item active">
+                    <div class="testimonial-item">
+                        <img src="{% static 'core/images/gardener.jpg' %}" class="testimonial-img rounded-circle" alt="Happy Customer 1">
+                        <p class="testimonial-text">"The Aeromind air purifier has greatly improved the air quality in my home!"</p>
+                        <p class="testimonial-author">- Jane Smith</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial-item">
+                        <img src="{% static 'core/images/enthusiast.jpg' %}" class="testimonial-img rounded-circle" alt="Happy Customer 2">
+                        <p class="testimonial-text">"I noticed a huge difference in the air quality after using it for just a few days!"</p>
+                        <p class="testimonial-author">- John Doe</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial-item">
+                        <img src="{% static 'core/images/community_leader.jpg' %}" class="testimonial-img rounded-circle" alt="Happy Customer 3">
+                        <p class="testimonial-text">"Silent operation and improved my allergies. It's a must-have for every home!"</p>
+                        <p class="testimonial-author">- Maria Lopez</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    
+{% endblock %}

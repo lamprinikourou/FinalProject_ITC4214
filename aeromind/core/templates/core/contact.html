@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Contact Us - Aeromind{% endblock %}
+
+{% block content %}
+<div class="container-fluid d-flex flex-column" style="min-height: 100vh;">
+    <!-- Contact Us Content Section -->
+    <div class="flex-grow-1">
+        <section class="contact-section">
+            <div class="contact-container">
+                <h1>Contact Us</h1>
+                <p>If you have any questions, feel free to reach out to us using the contact form below. We’ll get back to you as soon as possible!</p>
+                
+                <form action="#" method="post">
+                    {% csrf_token %}
+                    
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="contact-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+    </footer>
+</div>
+{% endblock %}

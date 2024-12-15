@@ -1,0 +1,54 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="product-detail">
+        <div class="product-image-wrapper">
+            <img src="{{ item.image.url }}" alt="{{ item.name }}" class="product-detail-image">
+        </div>
+
+        <div class="product-info">
+            <h1 class="product-title">{{ item.name }}</h1>
+            <p class="product-price">Price: ${{ item.price }}</p>
+            <p class="product-description">{{ item.description }}</p>
+        
+            <form method="POST" action="{% url 'cart:add_to_cart' item.id %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-success">Add to Cart</button>
+            </form>
+        
+            <a href="{% url 'catalog:catalog_home' %}" class="back-button">Back to Catalog</a>
+        </div>
+    </div>
+
+    <!-- Ratings Section -->
+    <div class="ratings-section">
+        <h3>Ratings</h3>
+
+        {% if average_rating %}
+        <p>Average Rating: {{ average_rating|floatformat:1 }} / 5 stars</p>
+        {% else %}
+        <p>No ratings yet.</p>
+        {% endif %}
+
+        <a href="{% url 'catalog:submit_rating' item.id %}" class="btn btn-primary">Rate this Product</a>
+
+        <h4>Reviews:</h4>
+        {% if item.ratings.count %}
+        <ul class="ratings-list">
+            {% for rating in item.ratings.all %}
+            <li>
+                <strong>{{ rating.user.username }}:</strong> 
+                {{ rating.rating }} stars
+                {% if rating.review %}
+                - "{{ rating.review }}"
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No reviews yet.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

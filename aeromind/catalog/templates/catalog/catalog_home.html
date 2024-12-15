@@ -1,0 +1,83 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1 class="page-title">Product Catalog</h1>
+
+    <!-- Button for Admin Users -->
+    {% if user.is_authenticated and user.is_staff %}
+    <div class="add-buttons">
+        <a href="{% url 'catalog:add_product' %}" class="btn btn-primary">Add Product</a>
+        <a href="{% url 'catalog:add_category' %}" class="btn btn-primary">Add Category</a>
+        <a href="{% url 'catalog:add_subcategory' %}" class="btn btn-primary">Add Subcategory</a>
+    </div>
+    {% endif %}
+
+    <!-- Search and Filter Section -->
+    <form method="GET" action="{% url 'catalog:catalog_home' %}" class="filter-form">
+        <div class="filter-row">
+            <input type="text" name="q" placeholder="Search by name..." value="{{ search_query }}" class="filter-input search-box">
+
+            <div class="price-filter">
+                <label for="min_price">Min Price</label>
+                <input type="number" name="min_price" value="{{ min_price }}" class="filter-input price-box" min="0" step="0.01">
+
+                <label for="max_price">Max Price</label>
+                <input type="number" name="max_price" value="{{ max_price }}" class="filter-input price-box" min="0" step="0.01">
+            </div>
+
+            <button type="submit" class="filter-button">Filter</button>
+        </div>
+    </form>
+    
+    <!-- Categories and Subcategories Section -->
+    <h2 class="section-title">Categories</h2>
+    <ul class="category-list">
+        <li class="category-item">
+            <a href="{% url 'catalog:catalog_home' %}" class="category-link {% if not selected_category and not selected_subcategory and not search_query %}selected{% endif %}">
+                All
+            </a>
+        </li>
+        {% for category in categories %}
+            <li class="category-item">
+                <a href="{% url 'catalog:catalog_home' %}?category={{ category.id }}{% if search_query %}&q={{ search_query }}{% endif %}" class="category-link {% if category.id == selected_category %}selected{% endif %}">
+                    {{ category.name }}
+                </a>
+                <!-- Subcategories Section -->
+                <ul class="subcategory-list">
+                    {% for subcategory in subcategories %}
+                        {% if subcategory.category.id == category.id %}
+                            <li class="subcategory-item">
+                                <a href="{% url 'catalog:catalog_home' %}?category={{ category.id }}&subcategory={{ subcategory.id }}{% if search_query %}&q={{ search_query }}{% endif %}" class="subcategory-link {% if subcategory.id == selected_subcategory %}selected{% endif %}">
+                                    {{ subcategory.name }}
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <!-- Product Section -->
+    <h2 class="section-title">Products</h2>
+    <div class="product-grid">
+        {% for item in items %}
+            <div class="product-card">
+                <a href="{% url 'catalog:item_detail' item.id %}">
+                    <img src="{{ item.image.url }}" alt="{{ item.name }}" class="product-image">
+                    <h3 class="product-name">{{ item.name }}</h3>
+                </a>
+                <p class="product-price">${{ item.price }}</p>
+                <!-- Add to Cart Button -->
+                <form method="POST" action="{% url 'cart:add_to_cart' item.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-success">Add to Cart</button>
+                </form>
+            </div>
+        {% empty %}
+            <p>No products available.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

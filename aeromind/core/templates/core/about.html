@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+
+{% block title %}About Us - Aeromind{% endblock %}
+
+{% load static %}
+
+{% block content %}
+    <section class="container">
+        <section class="about-section about-page">
+            <h1>About Aeromind</h1>
+            <p>Welcome to Aeromind! We are passionate about creating the best air purifiers for a healthier environment.</p>
+            <p>Our products are designed with the latest technology to ensure that the air you breathe is clean and safe. We aim to provide our customers with reliable and efficient air purifiers that help improve the air quality in their homes and workplaces.</p>
+            <p>Learn more about our products and how they can benefit your health and environment.</p>
+
+        
+            <div class="image-container">
+                <img src="{% static 'core/images/HUMID.jpg' %}" alt="Humidifier Image" class="small-image">
+            </div>
+
+            
+            <a href="{% url 'catalog:catalog_home' %}" class="btn-blue">Search our products</a>
+        </section>
+    </section>
+{% endblock %}

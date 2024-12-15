@@ -1,0 +1,861 @@
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #f0f8ff;
+    margin-top: 70px; /* Space for navbar */
+    text-align: center; /* Center the text */
+    min-height: 50vh; /* Make the hero section smaller */
+    width: 100%; /* Ensure it takes the full width */
+    max-width: 1200px; /* Limit max width */
+    margin-left: auto;
+    margin-right: auto; /* Center the section horizontally */
+    border-radius: 10px; /* Optional: Round the corners for a smoother look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow to make it stand out */
+}
+
+
+
+/* Hero Content */
+.hero-content {
+    flex: 1;
+    padding-right: 20px;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #002f6c;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.button {
+    padding: 12px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Hero Image */
+.hero-image {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title for the feature section */
+.section-title {
+    font-size: 2rem; /* Adjust the font size as needed */
+    color: #007BFF;  /* Blue color */
+    text-align: center; /* Center the title */
+    margin-bottom: 2rem; /* Add space below the title */
+    font-weight: bold; /* Optional: Make it bold */
+}
+
+/* Feature Row Styling */
+.feature-row {
+    display: flex;
+    justify-content: center; /* Horizontally center the cards */
+    flex-wrap: wrap;
+    gap: 20px; /* Add gap between the cards */
+}
+
+/* Individual Feature Card Styling */
+.feature-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 280px; /* Fixed width for the cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin: 10px; /* Margin between cards */
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Title Styling */
+.feature-title {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin-bottom: 1rem;
+    text-align: center; /* Center the title text */
+}
+
+/* Styling for small images below titles */
+.small-feature-img {
+    width: 50px; /* Adjust the size of the small images */
+    height: 50px;
+    object-fit: contain; /* Ensure the image maintains its aspect ratio */
+    margin: 10px 0; /* Space around the images */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Feature Text Styling */
+.feature-text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    text-align: center; /* Center the feature text */
+}
+
+/* Testimonials Section */
+.testimonial-item {
+    margin: 20px auto;
+    max-width: 600px; /* Ensure testimonials are centered */
+    text-align: center;
+}
+
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;       
+    object-position: center; 
+    border-radius: 50%;    
+    border: 3px solid #0056b3;  /* Green border for consistency with the color scheme */
+    margin: 0 auto 15px;
+}
+
+.testimonial-text {
+    font-size: 1.25em;
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #0056b3;  /* Matching the air purifier theme */
+    margin-top: -10px;
+}
+
+.carousel-item {
+    padding: 20px; /* Padding to separate items a bit */
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #0056b3; /* Green buttons */
+    border-radius: 50%; /* Circular buttons */
+    padding: 10px;
+}
+
+
+/* Footer */
+.footer { 
+    background-color: #e8f5e9; 
+    color: #0056b3; 
+    
+    padding-top: 20px; 
+    padding-bottom: 20px; 
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Login Page Custom Styles */
+.card {
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: #0056b3; 
+}
+
+.btn-primary {
+    background-color: #007BFF;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+a.text-primary {
+    text-decoration: none;
+}
+
+a.text-primary:hover {
+    text-decoration: underline;
+}
+
+/* Profile Page Custom Styles */
+.card {
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: #0056b3; 
+}
+
+.btn-primary {
+    background-color: #007BFF;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+a.text-danger {
+    color: #dc3545 !important;
+    text-decoration: none;
+}
+
+a.text-danger:hover {
+    text-decoration: underline;
+}
+
+/* Container for Content */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* About Us Section Styling */
+.about-section {
+    background-color: #f0f8ff;  /* Light blue background */
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1e3a8a;  /* Dark blue for the title */
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-section a {
+    color: #1e3a8a;  /* Blue links */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.about-section a:hover {
+    text-decoration: underline;
+}
+
+.about-section .btn-blue {
+    display: inline-block;
+    background-color: #1e3a8a;  /* Blue background */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.about-section .btn-blue:hover {
+    background-color: #3b82f6;  /* Lighter blue on hover */
+    transition: background-color 0.3s;
+}
+
+.product-card {
+    display: inline-block;
+    width: 150px; /* Adjust this to control the frame size */
+    margin: 10px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%; /* Make the image fit within the card */
+    height: auto;
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+.product-card h3 {
+    font-size: 14px; /* Smaller text for the product name */
+    margin: 5px 0;
+}
+
+.product-card p {
+    font-size: 12px; /* Smaller text for the price */
+    color: #333;
+}
+
+.contact-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffffff; /* Ensure background remains white */
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f8f9fa; /* Light gray background for the form only */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.contact-section h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #007bff; /* Blue focus border */
+    outline: none;
+}
+
+.contact-btn {
+    background-color: #007bff; /* Blue button */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 20px;
+    }
+
+    .contact-section h1 {
+        font-size: 24px;
+    }
+
+    .contact-section p {
+        font-size: 14px;
+    }
+}
+
+
+/* Navbar Logo Styling */
+.navbar-logo {
+    height: 70px;  /* Adjust as needed */
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Navbar Links - Larger Font Size */
+.nav-link {
+    font-size: 20px;         /* Increase font size */
+    padding: 0.2rem 0.7rem;  /* Adjust padding for alignment */
+    font-weight: normal;     /* Keep font weight normal */
+}
+
+/* Optional for Navbar Brand */
+.navbar-brand {
+    font-size: 22px;         /* Slightly larger brand name, if desired */
+}
+
+/* Specific margin adjustment for the about page */
+.about-page {
+    margin-bottom: 100px;  /* Add more space to the bottom of the about page content */
+}
+
+
+/* Container to center the image */
+.image-container {
+    text-align: left; /* Centers the image */
+    margin-bottom: 20px; /* Space between the image and the button */
+}
+
+/* Style for the image */
+.small-image {
+    width: 60%; /* Adjust this to control the image size */
+    max-width: 300px; /* Optional: limits the size for larger screens */
+    height: auto; /* Ensures aspect ratio is maintained */
+    border: 5px solid #ddd; /* Adds a light border around the image */
+    border-radius: 10px; /* Rounds the corners of the border */
+    padding: 5px; /* Space between the image and the border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the image */
+}
+
+/* Style for the button */
+.btn-blue {
+    display: inline-block; /* Makes the button appear below the image */
+    background-color: #007bff; /* Blue color for the button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px; /* Space between the image and the button */
+}
+
+.btn-blue:hover {
+    background-color: #0056b3; /* Darker blue when hovered */
+}
+
+/* Container to align input and button */
+.search-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Styling the input field */
+.search-input {
+    padding: 12px;
+    font-size: 16px;
+    width: 250px;  /* Adjust width for better size */
+    border-radius: 25px;
+    border: 2px solid #007bff;
+    margin-right: 10px;
+    transition: border-color 0.3s;
+}
+
+/* Styling the search button */
+.search-button {
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Input field on focus */
+.search-input:focus {
+    outline: none;
+    border-color: #0056b3;  /* Darker blue when focused */
+}
+
+/* Button hover effect */
+.search-button:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+}
+
+/* Styling for the categories section */
+.category-list {
+    padding: 0;
+    list-style: none;
+}
+
+.category-item {
+    margin: 10px 0;
+}
+
+.category-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.category-link:hover {
+    color: #0056b3;
+}
+
+/* Container to align input and button */
+.search-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Styling the input field */
+.search-input {
+    padding: 12px;
+    font-size: 16px;
+    width: 250px;  /* Adjust width for better size */
+    border-radius: 25px;
+    border: 2px solid #007bff;
+    margin-right: 10px;
+    transition: border-color 0.3s;
+}
+
+/* Styling the search button */
+.search-button {
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Input field on focus */
+.search-input:focus {
+    outline: none;
+    border-color: #0056b3;  /* Darker blue when focused */
+}
+
+/* Button hover effect */
+.search-button:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+}
+
+/* Styling for the categories section */
+.category-list {
+    padding: 0;
+    list-style: none;
+}
+
+.category-item {
+    margin: 10px 0;
+}
+
+.category-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.category-link:hover {
+    color: #0056b3;
+}
+
+.logout-link {
+    color: inherit; /* Matches the link text color */
+    font-size: inherit; /* Matches the font size */
+    font-family: inherit; /* Ensures the font family matches */
+    font-weight: inherit; /* Ensures consistent weight */
+    padding: 0; /* Removes button padding */
+    margin: 0; /* Removes default button margin */
+    border: none; /* Removes button border */
+    background: none; /* Removes button background */
+    text-decoration: none; /* Matches links */
+    cursor: pointer; /* Adds pointer cursor */
+    display: inline-block; /* Matches link display */
+}
+
+.logout-link:hover {
+    color: #0056b3; /* Hover color matching other links */
+    text-decoration: underline; /* Matches link hover effect */
+}
+
+/* General link styles */
+.nav-link {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.25rem; /* Large font size for the links */
+    font-family: inherit; /* Inherit font family */
+    padding: 0.75rem 1.5rem; /* Adequate padding */
+    display: inline-block; /* Align properly */
+    vertical-align: middle; /* Ensure vertical alignment */
+}
+
+/* Specific styles for the Logout button */
+.btn-logout {
+    background: none; /* Remove default background */
+    border: none; /* Remove border */
+    padding: 0.75rem 1.5rem; /* Match padding with other links */
+    color: inherit; /* Ensure color matches */
+    font: inherit; /* Inherit font from parent */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Align text in the middle */
+    vertical-align: middle; /* Align button vertically with other links */
+    font-size: 1.25rem; /* Match the font size of the links */
+    height: 100%; /* Ensure the height matches the other links */
+    line-height: 1.5rem; /* Ensure the text is centered vertically */
+}
+
+/* Optional hover effect for the button */
+.btn-logout:hover {
+    color: #0056b3; /* Change color on hover */
+    text-decoration: underline;
+}
+
+/* Product Detail Layout */
+.product-detail {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-image-wrapper {
+    flex: 1;
+}
+
+.product-detail-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.product-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.product-description {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.back-button {
+    margin-top: 1.5rem;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+
+.subcategory-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+.subcategory-item {
+    padding: 0.5rem 1rem;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.subcategory-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.subcategory-link:hover {
+    color: #0056b3;
+}
+
+/* Subcategories Styling */
+.subcategory-list {
+    list-style: none;
+    padding: 0 0 0 20px; /* Indent subcategories under their category */
+    margin: 10px 0;
+}
+
+.subcategory-item {
+    margin: 5px 0;
+}
+
+.subcategory-link {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.subcategory-link:hover {
+    color: #2a7ae4;
+}
+
+/* Categories and Subcategories Styling */
+.category-list, .subcategory-list {
+    list-style-type: none;  /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.category-item, .subcategory-item {
+    margin: 5px 0;  /* Add space between items */
+}
+
+.category-link, .subcategory-link {
+    display: block;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #0056b3; /* Consistent blue color */
+    text-decoration: none;
+    background: #f0f8ff; /* Light background */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.category-link:hover, .subcategory-link:hover {
+    background: #e0f0ff;  /* Slightly darker on hover */
+    color: #002f6c;
+}
+
+.category-link.selected, .subcategory-link.selected {
+    background: #007bff;  /* Highlight selected */
+    color: white;
+}
+
+.subcategory-list {
+    padding-left: 20px;  /* Indent subcategories */
+}
+
+/* Form Styling */
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f8f8f8;
+    border-radius: 8px;
+}
+
+.filter-row {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.filter-input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.search-box {
+    flex: 2;
+}
+
+.price-box {
+    max-width: 120px;
+}
+
+.filter-button {
+    padding: 0.7rem 1.5rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.filter-button:hover {
+    background: #0056b3;
+}
+
+.add-product-button {
+    text-align: right;
+    margin: 10px 0;
+}
+
+.add-product-button .btn {
+    font-size: 14px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+}
+
+.add-product-button .btn:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+.rating-option {
+    margin-right: 20px;  /* Added more space between the rating options */
+    display: inline-flex;
+    align-items: center;
+}
+
+.rating-option input[type="radio"] {
+    margin-right: 8px;  /* Space between the radio button and the number */
+}

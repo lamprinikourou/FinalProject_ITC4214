@@ -1,0 +1,70 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center text-primary mb-4">{{ product.name }} - Rate It!</h2>
+
+        <form method="POST">
+            {% csrf_token %}
+            
+            <!-- Rating Field -->
+            <div class="form-group mb-3">
+                <label for="{{ form.rating.id_for_label }}" class="form-label">Your Rating (1 to 5 stars)</label>
+                <div class="d-flex justify-content-start align-items-center">
+                    <div class="rating-option">
+                        <input type="radio" id="rating1" name="rating" value="1">
+                        <label for="rating1">1</label>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" id="rating2" name="rating" value="2">
+                        <label for="rating2">2</label>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" id="rating3" name="rating" value="3">
+                        <label for="rating3">3</label>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" id="rating4" name="rating" value="4">
+                        <label for="rating4">4</label>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" id="rating5" name="rating" value="5">
+                        <label for="rating5">5</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review Field -->
+            <div class="form-group mb-4">
+                <label for="{{ form.review.id_for_label }}" class="form-label">Your Review (optional)</label>
+                {{ form.review }}
+            </div>
+
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-success btn-lg">Submit Rating</button>
+            </div>
+        </form>
+
+        {% if product.ratings.count > 0 %}
+        <hr>
+        <h4 class="mt-4">Customer Reviews</h4>
+        <ul class="list-group mt-3">
+            {% for rating in product.ratings.all %}
+            <li class="list-group-item p-3 mb-2 bg-light">
+                <div class="d-flex justify-content-between">
+                    <strong>{{ rating.user.username }}</strong>
+                    <span class="badge bg-warning text-dark">{{ rating.rating }} stars</span>
+                </div>
+                {% if rating.review %}
+                <p class="mt-2"><i>"{{ rating.review }}"</i></p>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="mt-4 text-muted">No ratings yet. Be the first to share your thoughts!</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

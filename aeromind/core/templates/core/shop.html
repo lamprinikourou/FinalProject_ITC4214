@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Shop - Aeromind{% endblock %}
+
+{% block content %}
+    <section class="shop-section">
+        <h1>Our Products</h1>
+        <p>Explore our range of high-quality air purifiers.</p>
+
+        <div class="product-grid">
+            {% for product in products %}
+                <div class="product-card">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                    <h2>{{ product.name }}</h2>
+                    <p>{{ product.description }}</p>
+                    <a href="#" class="button">View Details</a>
+                </div>
+            {% empty %}
+                <p>No products available at the moment. Please check back later!</p>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

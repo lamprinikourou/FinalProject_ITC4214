@@ -1,0 +1,29 @@
+{% extends "core/base.html" %}
+
+{% block title %}Register - Aeromind{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="card p-4 shadow-lg" style="width: 100%; max-width: 500px;">
+        <h2 class="text-center mb-4" style="color: #007BFF;">Register</h2>
+        
+        {% if messages %}
+            <div class="alert alert-danger">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+        
+        <form method="POST" novalidate>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+        </form>
+        
+        <p class="text-center mt-3">Already have an account? 
+            <a href="{% url 'accounts:login' %}" class="text-primary font-weight-bold">Login here</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

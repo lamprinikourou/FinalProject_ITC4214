@@ -1,0 +1,21 @@
+{% extends "core/base.html" %}
+
+{% block title %}Login - Aeromind{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="card p-4 shadow-lg" style="width: 100%; max-width: 500px;">
+        <h2 class="text-center mb-4" style="color: #007BFF;">Login</h2>
+        
+        <form method="POST" class="mb-3">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+        
+        <p class="text-center">Don't have an account? 
+            <a href="{% url 'accounts:register' %}" class="text-primary font-weight-bold">Register here</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

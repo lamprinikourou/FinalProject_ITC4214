@@ -1,0 +1,21 @@
+{% extends "core/base.html" %}
+
+{% block title %}User Profile - Aeromind{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="card p-4 shadow-lg" style="width: 100%; max-width: 600px;">
+        <h2 class="text-center mb-4" style="color: #007BFF;">Profile</h2>
+        
+        <form method="POST" class="mb-3">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary btn-block">Update</button>
+        </form>
+        
+        <p class="text-center mt-3">
+            <a href="{% url 'accounts:logout' %}" class="text-danger font-weight-bold">Logout</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

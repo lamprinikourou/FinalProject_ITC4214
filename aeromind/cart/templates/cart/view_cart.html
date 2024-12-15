@@ -1,0 +1,59 @@
+{% extends "core/base.html" %}
+
+{% block title %}Your Cart{% endblock %}
+
+{% block content %}
+<div class="container-fluid d-flex flex-column" style="min-height: 100vh;">
+    <!-- Cart Content Section -->
+    <div class="flex-grow-1">
+        <h1 class="text-center my-4">Your Cart</h1>
+
+        {% if cart.cart_items.all %}
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in cart.cart_items.all %}
+                        <tr>
+                            <td>{{ item.item.name }}</td>
+                            <td>
+                                <form method="POST" action="{% url 'cart:update_cart' item.item.id %}" class="d-flex">
+                                    {% csrf_token %}
+                                    <input type="number" name="quantity" value="{{ item.quantity }}" min="1" class="form-control mr-2" style="width: 80px;" />
+                                    <button type="submit" class="btn btn-sm btn-primary">Update</button>
+                                </form>
+                            </td>
+                            <td>${{ item.item.price }}</td>
+                            <td>${{ item.total_price }}</td>
+                            <td>
+                                <a href="{% url 'cart:remove_from_cart' item.item.id %}" class="btn btn-sm btn-danger">Remove</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h3>Total: ${{ cart.total }}</h3>
+                <a href="{% url 'cart:checkout' %}" class="btn btn-success">Proceed to Checkout</a>
+            </div>
+        {% else %}
+            <p class="text-center">Your cart is empty!</p>
+            <div class="text-center">
+                <a href="{% url 'catalog:catalog_home' %}" class="btn btn-primary">Continue Shopping</a>
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+    </footer>
+</div>
+{% endblock %}

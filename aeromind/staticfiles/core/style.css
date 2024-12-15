@@ -1,0 +1,297 @@
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #f0f8ff;
+    margin-top: 70px; 
+    text-align: center; 
+    min-height: 50vh; 
+    width: 100%; 
+    max-width: 1200px; 
+    margin-left: auto;
+    margin-right: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 20px;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #002f6c;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.button {
+    padding: 12px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Hero Image */
+.hero-image {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.section-title {
+    font-size: 2rem; 
+    color: #007BFF; 
+    text-align: center; 
+    margin-bottom: 2rem; 
+    font-weight: bold; 
+}
+
+
+.feature-row {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.feature-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 280px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin: 10px; 
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Title Styling */
+.feature-title {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin-bottom: 1rem;
+    text-align: center; 
+}
+
+.small-feature-img {
+    width: 50px; 
+    height: 50px;
+    object-fit: contain; 
+    margin: 10px 0; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.feature-text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    text-align: center; 
+}
+
+
+.testimonial-item {
+    margin: 20px auto;
+    max-width: 600px; 
+    text-align: center;
+}
+
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;       
+    object-position: center; 
+    border-radius: 50%;    
+    border: 3px solid #0056b3;  
+    margin: 0 auto 15px;
+}
+
+.testimonial-text {
+    font-size: 1.25em;
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #0056b3; 
+    margin-top: -10px;
+}
+
+.carousel-item {
+    padding: 20px; 
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #0056b3; 
+    border-radius: 50%; 
+    padding: 10px;
+}
+
+
+.footer { 
+    background-color: #e8f5e9; 
+    color: #0056b3; 
+    padding-top: 20px; 
+    padding-bottom: 20px; 
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.card {
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: #0056b3; 
+}
+
+.btn-primary {
+    background-color: #007BFF;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+a.text-primary {
+    text-decoration: none;
+}
+
+a.text-primary:hover {
+    text-decoration: underline;
+}
+
+
+.card {
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: #0056b3; 
+}
+
+.btn-primary {
+    background-color: #007BFF;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+a.text-danger {
+    color: #dc3545 !important;
+    text-decoration: none;
+}
+
+a.text-danger:hover {
+    text-decoration: underline;
+}
+
+.cart-icon-link {
+    font-size: 4.5rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.cart-icon-link:hover {
+    color: #007bff;
+}
+
+
+/* Add spacing and shadow to the card */
+.card {
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Styling for the form fields */
+.form-group label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus, 
+.form-group select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* Center the title and make it prominent */
+.text-primary {
+    color: #007bff;
+}
+
+/* Button hover effect */
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Add some margin to the top of the page */
+.container {
+    margin-top: 20px;
+}
+

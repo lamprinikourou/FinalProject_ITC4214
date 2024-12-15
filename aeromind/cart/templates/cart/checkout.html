@@ -1,0 +1,47 @@
+{% extends "core/base.html" %}
+
+{% block title %}Checkout{% endblock %}
+
+{% block content %}
+<div class="container-fluid d-flex flex-column" style="min-height: 100vh;">
+    <!-- Checkout Content Section -->
+    <div class="flex-grow-1">
+        <h1 class="text-center my-4">Checkout</h1>
+
+        {% if cart.cart_items.all %}
+            <h3>Your Cart</h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in cart.cart_items.all %}
+                        <tr>
+                            <td>{{ item.item.name }}</td>
+                            <td>{{ item.quantity }}</td>
+                            <td>${{ item.total_price }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <h3>Total: ${{ cart.total }}</h3>
+            <p class="mt-4">Thank you for your purchase!</p>
+            <div class="text-center mt-3">
+                <a href="{% url 'catalog:catalog_home' %}" class="btn btn-primary">Back to Shop</a>
+            </div>
+        {% else %}
+            <p class="text-center">Your cart is empty!</p>
+            <div class="text-center">
+                <a href="{% url 'catalog:catalog_home' %}" class="btn btn-primary">Continue Shopping</a>
+            </div>
+        {% endif %}
+    </div>
+    <footer>
+    </footer>
+</div>
+{% endblock %}
